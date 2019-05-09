@@ -24,12 +24,14 @@ class MagicEightBall < Answers
   end #end def
 
   def main_menu
-    puts "~".colorize(:magenta) * 50
-    puts "Welcome to the Magic Eight Ball!".colorize(:magenta)
+    # puts "~".colorize(:magenta) * 128
     puts
-    puts "Type 'ask' to ask a question".colorize(:yellow)
-    puts "Type 'quit' to exit".colorize(:yellow)
-    puts "~".colorize(:magenta) * 50
+    puts "Welcome to the Magic Eight Ball!".colorize(:magenta).center(150)
+    puts
+    puts "Type 'ask' to ask a question".colorize(:yellow).center(150)
+    puts "Type 'quit' to exit".colorize(:yellow).center(150)
+    puts
+    # puts "~".colorize(:magenta) * 128
     puts
     print "Enter choice > ".colorize(:magenta)
     choice = gets.strip.to_s.downcase
@@ -68,9 +70,13 @@ class MagicEightBall < Answers
       sleep(1)
       # @answers.sample do |n|
       puts
-      puts "~".colorize(:cyan) * 45
-      puts "The Magic 8 Ball Says: '#{@answers.sample}'".colorize(:cyan)
-      puts "~".colorize(:cyan) * 45
+      # puts "~".colorize(:cyan) * 45
+      puts
+      puts "The Magic 8 Ball Says: '#{@answers.sample}'".colorize(:cyan).center(150)
+      puts
+      # puts "~".colorize(:cyan) * 45
+      sleep(4)
+      puts `clear`
       main_menu
       # end # end do
     end # end if
