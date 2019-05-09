@@ -4,10 +4,14 @@ require "pry"
 class Answers
   def initialize
     @answers = [
-      "some answer",
-      "some other answer",
-      "some other answer",
-      "some other answer",
+      "of course",
+      "well, i would hope not",
+      "yes, no, maybe so",
+      "yes",
+      "no. just no.",
+      "try asking again",
+      "no",
+      "maybe",
     ]
   end #end def
 end # end class
@@ -58,6 +62,7 @@ class MagicEightBall < Answers
     if @question == "quit"
       puts
       puts "Thanks for playing!"
+      puts "Goodbye!"
       exit
     else
       sleep(1)
